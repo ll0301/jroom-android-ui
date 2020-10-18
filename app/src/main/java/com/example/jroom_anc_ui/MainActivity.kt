@@ -1,8 +1,10 @@
 package com.example.jroom_anc_ui
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.example.jroom_anc_ui.tutorials.edittext.CustomEditTextActivity
+import com.example.jroom_anc_ui.tutorials.emotional.EmotionalActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -14,6 +16,11 @@ class MainActivity : AppCompatActivity() {
         
         emotional_button.setOnClickListener {
             val intent = Intent(this@MainActivity, EmotionalActivity::class.java)
+            startActivity(intent)
+        }
+        
+        edit_text_button.setOnClickListener{
+            val intent = Intent(this@MainActivity, CustomEditTextActivity::class.java)
             startActivity(intent)
         }
         

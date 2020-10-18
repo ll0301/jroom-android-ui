@@ -1,4 +1,4 @@
-package com.example.jroom_anc_ui
+package com.example.jroom_anc_ui.tutorials.emotional
 
 import android.content.Context
 import android.graphics.*
@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Parcelable
 import android.util.AttributeSet
 import android.view.View
+import com.example.jroom_anc_ui.R
 
 class EmotionalFaceView(context: Context, attrs: AttributeSet) : View(context, attrs) {
     
@@ -58,10 +59,14 @@ class EmotionalFaceView(context: Context, attrs: AttributeSet) : View(context, a
         faceColor = typedArray.getColor(R.styleable.EmotionalFaceView_faceColor, DEFAULT_FACE_COLOR)
         eyesColor = typedArray.getColor(R.styleable.EmotionalFaceView_eyesColor, DEFAULT_EYES_COLOR)
         mouthColor = typedArray.getColor(R.styleable.EmotionalFaceView_mouthColor, DEFAULT_MOUTH_COLOR)
-        borderColor = typedArray.getColor(R.styleable.EmotionalFaceView_borderColor,
-            DEFAULT_BORDER_COLOR)
-        borderWidth = typedArray.getDimension(R.styleable.EmotionalFaceView_borderWidth,
-            DEFAULT_BORDER_WIDTH)
+        borderColor = typedArray.getColor(
+            R.styleable.EmotionalFaceView_borderColor,
+            DEFAULT_BORDER_COLOR
+        )
+        borderWidth = typedArray.getDimension(
+            R.styleable.EmotionalFaceView_borderWidth,
+            DEFAULT_BORDER_WIDTH
+        )
         
         // 8
         // TypedArray objects are shared and must be recycled.

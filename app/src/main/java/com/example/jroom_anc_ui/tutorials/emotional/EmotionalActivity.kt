@@ -1,7 +1,8 @@
-package com.example.jroom_anc_ui
+package com.example.jroom_anc_ui.tutorials.emotional
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.jroom_anc_ui.R
 import kotlinx.android.synthetic.main.activity_emotional.*
 
 class EmotionalActivity : AppCompatActivity() {
