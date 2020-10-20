@@ -7,6 +7,22 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="Text.RankStyle" parent="android:TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/light_grey</item>
+        <item name="android:fontFamily">@font/app_font</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="Text.TitleStyle" parent="android:TextAppearance">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/app_font</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
     <style name="FullScreen" parent="AppTheme">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowActionBar">false</item>

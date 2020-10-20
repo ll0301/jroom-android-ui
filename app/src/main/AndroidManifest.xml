@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.jroom_anc_ui">
+    package="com.example.jroomui">
 
     <application
         android:allowBackup="true"
@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".IntroActivity"
+        <activity android:name="com.example.jroomui.IntroActivity"
             android:theme="@style/FullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,10 +19,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".tutorials.edittext.CustomEditTextActivity" />
+        <activity android:name="com.example.jroomui.tutorials.edittext.CustomEditTextActivity" />
 
-        <activity android:name=".tutorials.emotional.EmotionalActivity" />
+        <activity android:name="com.example.jroomui.tutorials.emotional.EmotionalActivity" />
 
-        <activity android:name=".MainActivity" />
+        <activity android:name="com.example.jroomui.MainActivity" />
     </application>
 </manifest>

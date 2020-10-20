@@ -1,4 +1,4 @@
-package com.example.jroom_anc_ui.tutorials.emotional
+package com.example.jroomui.tutorials.emotional
 
 import android.content.Context
 import android.graphics.*
@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.os.Parcelable
 import android.util.AttributeSet
 import android.view.View
-import com.example.jroom_anc_ui.R
+import com.example.jroomui.R
 
 class EmotionalFaceView(context: Context, attrs: AttributeSet) : View(context, attrs) {
     

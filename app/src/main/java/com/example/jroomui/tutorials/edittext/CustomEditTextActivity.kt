@@ -1,8 +1,8 @@
-package com.example.jroom_anc_ui.tutorials.edittext
+package com.example.jroomui.tutorials.edittext
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.jroom_anc_ui.R
+import com.example.jroomui.R
 
 class CustomEditTextActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

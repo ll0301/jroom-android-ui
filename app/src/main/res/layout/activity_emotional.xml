@@ -7,7 +7,7 @@ android:layout_height="match_parent"
 android:layout_margin="20dp"
 tools:context=".tutorials.emotional.EmotionalActivity">
 
-<com.example.jroom_anc_ui.tutorials.emotional.EmotionalFaceView
+<com.example.jroomui.tutorials.emotional.EmotionalFaceView
     android:id="@+id/happyButton"
     android:layout_width="@dimen/face_button_dimen"
     android:layout_height="@dimen/face_button_dimen"
@@ -19,7 +19,7 @@ tools:context=".tutorials.emotional.EmotionalActivity">
     app:mouthColor="@color/white"
     app:state="happy" />
 
-<com.example.jroom_anc_ui.tutorials.emotional.EmotionalFaceView
+<com.example.jroomui.tutorials.emotional.EmotionalFaceView
     android:id="@+id/sadButton"
     android:layout_width="@dimen/face_button_dimen"
     android:layout_height="@dimen/face_button_dimen"
@@ -39,7 +39,7 @@ tools:context=".tutorials.emotional.EmotionalActivity">
     android:layout_centerHorizontal="true"
     android:text="Hello Custom Views" />
 
-<com.example.jroom_anc_ui.tutorials.emotional.EmotionalFaceView
+<com.example.jroomui.tutorials.emotional.EmotionalFaceView
     android:id="@+id/emotionalFaceView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="jroom-anc-ui/app" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jroom-anc-ui.iml" filepath="$PROJECT_DIR$/.idea/modules/jroom-anc-ui.iml" group="jroom-anc-ui" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JroomUI.iml" filepath="$PROJECT_DIR$/.idea/modules/JroomUI.iml" group="JroomUI" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="JroomUI/app" />
     </modules>
   </component>
 </project>

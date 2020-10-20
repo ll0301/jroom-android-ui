@@ -1,10 +1,10 @@
-package com.example.jroom_anc_ui
+package com.example.jroomui
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.jroom_anc_ui.tutorials.edittext.CustomEditTextActivity
-import com.example.jroom_anc_ui.tutorials.emotional.EmotionalActivity
+import com.example.jroomui.tutorials.edittext.CustomEditTextActivity
+import com.example.jroomui.tutorials.emotional.EmotionalActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

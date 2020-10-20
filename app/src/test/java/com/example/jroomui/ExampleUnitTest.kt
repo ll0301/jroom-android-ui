@@ -1,4 +1,4 @@
-package com.example.jroom_anc_ui
+package com.example.jroomui
 
 import org.junit.Test
 
