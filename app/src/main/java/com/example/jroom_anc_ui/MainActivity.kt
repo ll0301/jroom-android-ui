@@ -19,10 +19,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         
-        edit_text_button.setOnClickListener{
+        edit_text_button.setOnClickListener {
             val intent = Intent(this@MainActivity, CustomEditTextActivity::class.java)
             startActivity(intent)
         }
-        
     }
 }
