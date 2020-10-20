@@ -13,7 +13,7 @@ class IntroActivity : AppCompatActivity() {
         // Coroutine
        CoroutineScope(Dispatchers.Main).launch {
            withContext(CoroutineScope(Dispatchers.Default).coroutineContext) {
-               delay(5000L)
+               delay(4000L)
                val intent = Intent(this@IntroActivity, MainActivity::class.java)
                startActivity(intent)
                finish()
