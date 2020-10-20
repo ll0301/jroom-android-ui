@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.animation.AnimationUtils
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.jroomui.main.MainActivity
 import kotlinx.coroutines.*
 
 class IntroActivity : AppCompatActivity() {

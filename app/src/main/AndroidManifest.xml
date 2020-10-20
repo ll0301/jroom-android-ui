@@ -23,6 +23,6 @@
 
         <activity android:name="com.example.jroomui.tutorials.emotional.EmotionalActivity" />
 
-        <activity android:name="com.example.jroomui.MainActivity" />
+        <activity android:name="com.example.jroomui.main.MainActivity" />
     </application>
 </manifest>

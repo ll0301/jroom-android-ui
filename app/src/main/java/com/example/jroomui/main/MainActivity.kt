@@ -1,10 +1,10 @@
-package com.example.jroomui
+package com.example.jroomui.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.jroomui.R
 
 class MainActivity : AppCompatActivity() {
-
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
