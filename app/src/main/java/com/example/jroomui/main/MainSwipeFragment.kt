@@ -2,6 +2,7 @@ package com.example.jroomui.main
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
@@ -16,7 +17,12 @@ class MainSwipeFragment : Fragment() {
     
     private lateinit var parentView: ConstraintLayout
     private lateinit var logoSwipeButton: TextView
+    private lateinit var loginTextView: TextView
+    private lateinit var guestTextView: TextView
+    
     private lateinit var cursorAnimation: LottieAnimationView
+    private lateinit var swipeUpAnimation: LottieAnimationView
+    private lateinit var swipeDownAnimation: LottieAnimationView
     
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -32,9 +38,18 @@ class MainSwipeFragment : Fragment() {
         
         logoSwipeButton = view.findViewById(R.id.intro_logo)
         cursorAnimation = view.findViewById(R.id.intro_cursor)
+        
+        swipeUpAnimation = view.findViewById(R.id.intro_swipe_up)
+        swipeDownAnimation = view.findViewById(R.id.intro_swipe_down)
+        swipeDownAnimation.visibility = View.GONE
+        swipeUpAnimation.visibility = View.GONE
+        
         parentView = view.findViewById(R.id.intro_cl)
-    
-        var statusBarHeight:Int = 0
+        
+        loginTextView = view.findViewById(R.id.intro_login_text)
+        guestTextView = view.findViewById(R.id.intro_guest_text)
+        
+        var statusBarHeight: Int = 0
         var resId = resources.getIdentifier("status_bar_height", "dimen", "android")
         if (resId > 0) {
             statusBarHeight = resources.getDimensionPixelSize(resId)
@@ -43,33 +58,55 @@ class MainSwipeFragment : Fragment() {
         setOnTouchListener(statusBarHeight)
     }
     
-
     
-    @SuppressLint("ClickableViewAccessibility", "Recycle")
+    @SuppressLint("ClickableViewAccessibility", "Recycle", "ResourceAsColor")
     private fun setOnTouchListener(status: Int) {
-        logoSwipeButton.setOnTouchListener { v, event ->
+        logoSwipeButton.setOnTouchListener { button, event ->
             //var parentWidth = parentView.width
             var parentHeight = parentView.height
             when (event!!.action) {
                 MotionEvent.ACTION_DOWN -> {
                     cursorAnimation.visibility = View.GONE
+                    guestTextView.visibility = View.VISIBLE
+                    loginTextView.visibility = View.VISIBLE
+                    swipeDownAnimation.visibility = View.VISIBLE
+                    swipeUpAnimation.visibility = View.VISIBLE
+                    swipeDownAnimation.playAnimation()
+                    swipeUpAnimation.playAnimation()
                 }
-                
+    
                 MotionEvent.ACTION_UP -> {
+                    button.y = ((parentHeight * 0.5f) - status)
+                    button.visibility = View.VISIBLE
                     cursorAnimation.visibility = View.VISIBLE
-                    v.y = ((parentHeight / 2) - status).toFloat()
+                    swipeDownAnimation.visibility = View.GONE
+                    swipeUpAnimation.visibility = View.GONE
+                    guestTextView.visibility = View.GONE
+                    loginTextView.visibility = View.GONE
+                    guestTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20f)
+                    loginTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20f)
                 }
-                
+    
                 MotionEvent.ACTION_MOVE -> {
+                    button.y = button.y + (event.y - (button.height * 0.5f))
+                    button.visibility = View.VISIBLE
+                    guestTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20f)
+                    loginTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20f)
                     when {
-                        v.y < 0f -> {
-                            v.y = 0f
+                        button.y < (parentHeight * 0.1f) - status -> {
+                            button.visibility = View.GONE
+                            loginTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30f)
                         }
-                        (v.y + v.height) > parentHeight -> {
-                            v.y = parentHeight.toFloat() - v.height
+            
+                        button.y > (parentHeight * 0.9f) - status -> {
+                            button.visibility = View.GONE
+                            guestTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30f)
                         }
-                        else -> {
-                            v.y = v.y + (event.y - (v.height * 0.5f))
+            
+                        button.y < (parentHeight * 0.45f) - status ||
+                                button.y > (parentHeight * 0.55f) - status  -> {
+                            swipeUpAnimation.visibility = View.GONE
+                            swipeDownAnimation.visibility = View.GONE
                         }
                     }
                 }
@@ -77,4 +114,7 @@ class MainSwipeFragment : Fragment() {
             true
         }
     }
+    
+    
+    
 }
