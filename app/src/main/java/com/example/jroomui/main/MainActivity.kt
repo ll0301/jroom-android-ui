@@ -10,14 +10,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         
-/*        emotional_button.setOnClickListener {
-            val intent = Intent(this@MainActivity, EmotionalActivity::class.java)
-            startActivity(intent)
-        }
-        
-        edit_text_button.setOnClickListener {
-            val intent = Intent(this@MainActivity, CustomEditTextActivity::class.java)
-            startActivity(intent)
-        }*/
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.contentFrame, MainSwipeFragment())
+            .commit()
     }
 }

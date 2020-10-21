@@ -2,7 +2,6 @@ package com.example.jroomui
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.animation.AnimationUtils
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -14,12 +13,12 @@ class IntroActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_intro)
         
-        var statusBarHeight:Int = 0;
+        var statusBarHeight:Int = 0
         var resId = resources.getIdentifier("status_bar_height", "dimen", "android")
         if (resId > 0) {
             statusBarHeight = resources.getDimensionPixelSize(resId)
         }
-        Log.e("barHeight", statusBarHeight.toString()) // result : 63
+        // Log.e("barHeight", statusBarHeight.toString()) // result : 63
         
         val introLogo = findViewById<TextView>(R.id.intro_logo)
         introLogo.setPadding(0,statusBarHeight,0,0)
