@@ -12,7 +12,12 @@
         android:id="@+id/coordinator_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Main Activity"
+            android:textSize="50sp"
+            android:textStyle="bold" />
         <FrameLayout
             android:id="@+id/contentFrame"
             android:layout_width="match_parent"

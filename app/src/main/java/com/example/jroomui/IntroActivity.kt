@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.view.animation.AnimationUtils
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.jroomui.main.MainActivity
+import com.example.jroomui.introswipe.IntroSwipeActivity
 import kotlinx.coroutines.*
 
 class IntroActivity : AppCompatActivity() {
@@ -29,7 +29,7 @@ class IntroActivity : AppCompatActivity() {
        CoroutineScope(Dispatchers.Main).launch {
            withContext(CoroutineScope(Dispatchers.Default).coroutineContext) {
                delay(4000L)
-               val intent = Intent(this@IntroActivity, MainActivity::class.java)
+               val intent = Intent(this@IntroActivity, IntroSwipeActivity::class.java)
                startActivity(intent)
                overridePendingTransition(R.anim.fadein, R.anim.fadeout)
                finish()

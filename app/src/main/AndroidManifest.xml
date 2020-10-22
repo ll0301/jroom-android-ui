@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name="com.example.jroomui.IntroActivity"
+        <activity android:name=".introswipe.IntroSwipeActivity"></activity>
+        <activity
+            android:name=".IntroActivity"
             android:theme="@style/FullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,11 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name="com.example.jroomui.tutorials.edittext.CustomEditTextActivity" />
-
-        <activity android:name="com.example.jroomui.tutorials.emotional.EmotionalActivity" />
-
-        <activity android:name="com.example.jroomui.main.MainActivity" />
+        <activity android:name=".tutorials.edittext.CustomEditTextActivity" />
+        <activity android:name=".tutorials.emotional.EmotionalActivity" />
+        <activity android:name=".main.MainActivity" />
     </application>
+
 </manifest>
