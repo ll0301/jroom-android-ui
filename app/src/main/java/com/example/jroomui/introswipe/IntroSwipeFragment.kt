@@ -15,7 +15,7 @@ import androidx.lifecycle.LifecycleObserver
 import com.airbnb.lottie.LottieAnimationView
 import com.example.jroomui.R
 import com.example.jroomui.main.MainActivity
-import com.example.jroomui.util.showSnackbar
+import com.example.jroomui.util.showSnackBar
 import com.google.android.material.snackbar.Snackbar
 
 class IntroSwipeFragment : Fragment(), LifecycleObserver {
@@ -99,7 +99,7 @@ class IntroSwipeFragment : Fragment(), LifecycleObserver {
                     when {
                         button.y < (parentHeight * 0.1f) - status -> {
                             button.visibility = View.GONE
-                            view?.showSnackbar("Coming soon ...", Snackbar.LENGTH_SHORT)
+                            view?.showSnackBar("Coming soon ...", Snackbar.LENGTH_SHORT)
                         }
             
                         button.y > (parentHeight * 0.9f) - status -> {

@@ -7,6 +7,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="ToolBar" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
     <style name="Text.RankStyle" parent="android:TextAppearance">
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">14dp</item>

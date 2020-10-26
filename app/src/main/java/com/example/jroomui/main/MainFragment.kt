@@ -1,4 +1,9 @@
 package com.example.jroomui.main
 
-class MainFragment {
+import androidx.fragment.app.Fragment
+
+class MainFragment : Fragment() {
+
+
+
 }

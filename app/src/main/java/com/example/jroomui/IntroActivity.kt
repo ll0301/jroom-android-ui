@@ -18,8 +18,7 @@ class IntroActivity : AppCompatActivity() {
         if (resId > 0) {
             statusBarHeight = resources.getDimensionPixelSize(resId)
         }
-        // Log.e("barHeight", statusBarHeight.toString()) // result : 63
-        
+
         val introLogo = findViewById<TextView>(R.id.intro_logo)
         introLogo.setPadding(0,statusBarHeight,0,0)
         

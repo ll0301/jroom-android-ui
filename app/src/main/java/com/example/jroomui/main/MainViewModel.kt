@@ -1,4 +1,9 @@
 package com.example.jroomui.main
 
-class MainViewModel {
+import androidx.lifecycle.ViewModel
+
+class MainViewModel() : ViewModel() {
+
+
+
 }
