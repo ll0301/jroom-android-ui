@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".introswipe.IntroSwipeActivity"></activity>
+        <activity android:name=".introswipe.IntroSwipeActivity" />
         <activity
             android:name=".IntroActivity"
             android:theme="@style/FullScreen">
@@ -19,8 +19,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".tutorials.edittext.CustomEditTextActivity" />
-        <activity android:name=".tutorials.emotional.EmotionalActivity" />
         <activity android:name=".main.MainActivity" />
     </application>
 
