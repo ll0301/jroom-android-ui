@@ -61,22 +61,6 @@ class IntroSwipeFragment : Fragment(), LifecycleObserver {
         }
         setOnTouchListener(statusBarHeight)
     }
-
-/*    @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
-    fun onCreated() {
-        // activity?.lifecycle?.removeObserver(this)
-        // view?.showSnackbar("hi", 0)
-    }
-    
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        activity?.lifecycle?.addObserver(this)
-    }
-    
-    override fun onDetach() {
-        super.onDetach()
-        activity?.lifecycle?.removeObserver(this)
-    }*/
     
     
     @SuppressLint("ClickableViewAccessibility", "Recycle", "ResourceAsColor")
